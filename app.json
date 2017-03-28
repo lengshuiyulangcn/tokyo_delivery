@@ -1,0 +1,29 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "东京健康外卖",
+    "navigationBarTextStyle":"black"
+  },
+ "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "image/girl.png",
+      "selectedIconPath": "image/girl.png",
+      "text": "菜单"
+    }, {
+      "pagePath": "pages/logs/logs",
+      "iconPath": "image/me.png",
+      "selectedIconPath": "image/me.png",
+      "text": "我"
+    }]
+  }
+}
