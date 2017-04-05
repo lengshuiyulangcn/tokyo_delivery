@@ -1,16 +1,19 @@
 <!--index.wxml-->
 <view class="container">
-    <block wx:for-items="{{items}}">
+    <block wx:for="{{users}}" wx:for-index="idx" wx:for-item="user">
         <view class="flex item">
             <view class="item_left">
-                <image src="{{item.thumb}}"/>
+                <image src="{{user.avatar_url}}"/>
             </view>
             <view class="flex_auto item_middle">
-                <view><text class="title">{{item.name}}</text></view>
-                <view><text class="sub_title">{{item.yomi}}</text></view>
-            </view>
-            <view class="item_right">
-                <view><text class="action">出张中</text></view>
+                <view><text class="title">{{user.nickname}}</text></view>
+                <view><text class="sub_title">账号: {{user.account_id}}</text></view>
+                <view class="item_bottom">
+                  <view><text class="datetime">滞留时间:{{user.start_at}} ~ {{user.end_at}}</text></view>
+                </view>
+              <text class="tag" wx:for="{{user.tags}}" wx:for-index="idx" wx:for-item="tag">
+                  {{tag.name}}
+              </text>
             </view>
         </view>
     </block>

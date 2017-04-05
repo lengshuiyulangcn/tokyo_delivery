@@ -1,0 +1,36 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section">
+    <view class="section__title">输入微信id:</view>
+    <input name="account_id" placeholder="please input here" value="{{account_id}}"/>
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">选择你可以提供的帮助</view>
+    <checkbox-group name="tag_ids">
+        <label class="checkbox" wx:for="{{tags}}" wx:for-item="tag">
+          <checkbox value="{{tag.id}}" checked="{{tag.checked}}"/>{{tag.name}}
+        </label>
+    </checkbox-group>
+  </view>
+  <view class="section">
+    <view class="section__title">滞留日期</view>
+    <picker mode="date" value="{{start_at}}" name="start_at" start="2017-04-01" end="2020-09-01" bindchange="bindStartDateChange">
+       <view class="picker">
+          From: {{start_at}}
+       </view>
+    </picker>
+    <picker mode="date" value="{{end_at}}" name="end_at" start="2017-04-01" end="2020-09-01" bindchange="bindEndDateChange">
+       <view class="picker">
+          To: {{end_at}}
+       </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="section__title">
+      确认成为帮客:
+    <switch bindchange="beTheHelper" checked="{{agreement}}"/>
+    </view>
+  </view>
+  <view class="btn-area">
+    <button formType="submit">提交</button>
+  </view>
+</form>

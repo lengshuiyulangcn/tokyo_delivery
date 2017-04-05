@@ -57,7 +57,7 @@ view.text text {
 
 .item_bottom {
     position: relative;
-    display: block;
+    display: inline-block;
     margin-bottom: 5px;
     overflow: hidden;
     background-color: #fff;

@@ -1,12 +1,12 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/me/me"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "东京健康外卖",
+    "navigationBarTitleText": "免税帮客",
     "navigationBarTextStyle":"black"
   },
  "tabBar": {
@@ -18,9 +18,9 @@
       "pagePath": "pages/index/index",
       "iconPath": "image/girl.png",
       "selectedIconPath": "image/girl.png",
-      "text": "菜单"
+      "text": "找人帮忙"
     }, {
-      "pagePath": "pages/logs/logs",
+      "pagePath": "pages/me/me",
       "iconPath": "image/me.png",
       "selectedIconPath": "image/me.png",
       "text": "我"
