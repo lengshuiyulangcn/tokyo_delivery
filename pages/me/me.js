@@ -56,7 +56,7 @@ Page({
                 account_id: e.detail.value["account_id"],
                 tag_ids: e.detail.value["tag_ids"],
                 start_at: that.data.start_at,
-                start_at: that.data.end_at,
+                end_at: that.data.end_at,
                 agreement: that.data.agreement
               },
               header: {
@@ -64,7 +64,11 @@ Page({
                       'Authorization': 'Bearer ' + wx.getStorageSync('access_token') 
                   },
               success: function(res) {
-                console.log(res)
+                 wx.showToast({
+                     title: '保存信息成功',
+                     icon: 'success',
+                     duration: 2000
+                 })
               }
           })
         }
